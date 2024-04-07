@@ -1,3 +1,4 @@
+const devTestData = require('../data/devTestData.json');
 const HomePage = require("../../po/pages/googleCloud/home.page.js");
 const SearchPage = require("../../po/pages/googleCloud/search.page.js");
 const CalculatorPage = require("../../po/pages/googleCloud/calculator.page.js");
@@ -9,8 +10,8 @@ const calculatorPage = new CalculatorPage();
 const mailPage = new MailPage("https://yopmail.com/email-generator", "yopmail");
 
 describe("Testsuite for checking the workflow of tasks 3 & 4", () => {
-  const amount = "1,732.12";
-  const expectedText = `Total Estimated Cost: USD ${amount} per 1 month`;
+ 
+  const expectedText = `Total Estimated Cost: USD ${devTestData.productData.amount} per 1 month`;
 
   it("should search for a legacy calculator on the Google cloud page", async () => {
     await homePage.open();
@@ -149,7 +150,7 @@ describe("Testsuite for checking the workflow of tasks 3 & 4", () => {
 
     await browser.pause(2000);
 
-    if(await browser.getUrl()==="https://yopmail.com/email-generator#google_vignette"){
+    if(await browser.getUrl()==="https://yopmail.com/es/email-generator#google_vignette"){
       throw new Error("Ad On displayed. The test couldn't be completed")
     }else{
       await mailPage.mailComponent.inboxBtn.waitForClickable({
@@ -159,8 +160,8 @@ describe("Testsuite for checking the workflow of tasks 3 & 4", () => {
       await mailPage.mailComponent.inboxBtn.click();
 
       //check that the emailed 'Total Estimated Monthly Cost' matches the result in the calculator.
-     /* expect(await mailPage.mailComponent.cost.getText()).toEqual(
-        "USD " + amount
+   /*expect(await mailPage.mailComponent.cost.getText()).toEqual(
+        "USD " +devTestData.productData.amount
       );*/
 
     }  

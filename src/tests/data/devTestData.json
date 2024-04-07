@@ -1,0 +1,15 @@
+{
+    "userCredentials": {
+      "validUser": {
+        "username": "testuser",
+        "password": "Test123!"
+      },
+      "invalidUser": {
+        "username": "invaliduser",
+        "password": "Invalid123!"
+      }
+    },
+    "productData": {
+        "amount": "1,732.12"
+    }
+  }

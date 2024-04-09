@@ -1,8 +1,11 @@
 const BasePage = require("./base.page.js");
-const ProductComponent = require("../../components/googleCloud/calculator/product.component.js");
-const ComputeFormComponent = require("../../components/googleCloud/calculator/computeForm.component.js");
-const EstimationComponent = require("../../components/googleCloud/calculator/estimation.component.js");
-const EmailModalComponent = require("../../components/googleCloud/calculator/emailModal.component.js");
+
+const {
+  ProductComponent,
+  ComputeFormComponent,
+  EstimationComponent,
+  EmailModalComponent,
+} = require("../../components");
 
 class CalculatorPage extends BasePage {
   constructor() {

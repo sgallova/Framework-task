@@ -1,4 +1,4 @@
-const MailComponent = require("../../components/mailGenerator/mail.component");
+const {MailComponent} = require("../../components");
 
 class MailPage {
   constructor(url, match) {

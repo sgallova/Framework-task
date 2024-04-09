@@ -1,5 +1,5 @@
 const BasePage = require("./base.page.js");
-const SearchComponent = require("../../components/googleCloud/searchResults/search.component.js");
+const {SearchComponent} = require("../../components");
 
 class SearchPage extends BasePage {
   constructor() {

@@ -1,4 +1,4 @@
-const HeaderComponent = require("../../components/googleCloud/common/header.component");
+const {HeaderComponent} = require("../../components");
 
 class BasePage {
   constructor(url) {

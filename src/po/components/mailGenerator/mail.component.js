@@ -8,7 +8,13 @@ class MailComponent {
   }
 
   get cost() {
-    return $$("table")[1].$("tbody").$("tr")[1].$("td")[4];
+    //return $("table").$("tbody").$$("tr")[1].$("table").$("td")[4];
+    return $$('h3')[1];
+             
+  }
+
+  get inboxIframe(){
+    return $('iframe#ifmail');
   }
 }
 

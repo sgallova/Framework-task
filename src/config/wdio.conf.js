@@ -1,11 +1,12 @@
-const devTestData = require('../tests/data/devTestData.json');
-const { existsSync, mkdirSync } = require('fs');
 
-exports.config = {
+import devTestData from '../tests/data/devTestData.json' with { type: "json" };
+import { existsSync, mkdirSync } from 'fs';
+
+export const config = {
 
     suites: {
-        smoke: ['./tests/smoke/*.js'],
-        other: ['./tests/other/*.js']
+        smoke: ['./tests/specs/smoke/*.js'],
+        other: ['./tests/specs/other/*.js']
     },
     //
     // ====================
@@ -92,7 +93,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    // baseUrl: 'http://localhost:8080',
+    baseUrl: 'https://cloud.google.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,

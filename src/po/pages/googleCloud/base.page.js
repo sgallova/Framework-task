@@ -1,18 +1,16 @@
-const {HeaderComponent} = require("../../components");
-
 class BasePage {
-  constructor(url) {
-    this.url = url;
-    this.header = new HeaderComponent();
-  }
+  
+  //define common elements
+  get searchIcon() { return $('[jsname="Ohx1pb"]')}
+  get searchBar() {return $('input[placeholder="Search"]')}
 
-  open() {
-    browser.url(this.url);
+  open(path) {
+    return browser.url(path);
   }
 
   hitEnter() {
-    browser.keys("\uE007");
+    return browser.keys("\uE007");
   }
 }
 
-module.exports = BasePage;
+export default BasePage;

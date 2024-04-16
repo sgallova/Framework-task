@@ -1,15 +1,13 @@
-const {MailComponent} = require("../../components");
-
 class MailPage {
-  constructor(url, match) {
-    this.url = url;
-    this.match = match;
-    this.mailComponent = new MailComponent();
-  }
+  
+  get randomMail() {return $('//span[@class="genytxt"]')}
+  get inboxBtn() {return $$('button[class="md but text f24 egenbut"]')[2]}
+  get cost() {return $$('h3')[1]}
+  get inboxIframe(){return $('iframe#ifmail')}
 
   open() {
-    browser.url(this.url);
+   return browser.url(this.url);
   }
 }
 
-module.exports = MailPage;
+export default new MailPage();

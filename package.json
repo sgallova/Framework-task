@@ -1,11 +1,11 @@
 {
   "name": "test-automation-google-cloud",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run src/config/wdio.conf.js"
+    "test": "wdio run src/config/wdio.conf.js"
   },
   "repository": {
     "type": "git",

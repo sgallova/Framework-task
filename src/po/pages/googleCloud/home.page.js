@@ -1,9 +1,10 @@
-const BasePage = require("./base.page.js");
+import BasePage from './base.page.js'
 
 class HomePage extends BasePage {
-  constructor() {
-    super("https://cloud.google.com/?hl=en");
+
+  open() {
+    return super.open("/?hl=en");
   }
 }
 
-module.exports = HomePage;
+export default new HomePage();

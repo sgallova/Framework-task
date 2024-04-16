@@ -1,16 +1,22 @@
 {
-    "userCredentials": {
-      "validUser": {
-        "username": "testuser",
-        "password": "Test123!"
-      },
-      "invalidUser": {
-        "username": "invaliduser",
-        "password": "Invalid123!"
-      }
+  "userCredentials": {
+    "validUser": {
+      "username": "testuser",
+      "password": "Test123!"
     },
-    "productData": {
-        "amount": "1,732.12",
-        "searchText": "Google Cloud Platform Pricing Calculator"
+    "invalidUser": {
+      "username": "invaliduser",
+      "password": "Invalid123!"
     }
+  },
+  "productData": {
+    "amount": "1,732.12",
+    "searchText": "Google Cloud Platform Pricing Calculator"
+  },
+  "randomEmail": {
+    "url": "https://yopmail.com/email-generator",
+    "match": "yopmail",
+    "ads": "https://yopmail.com/es/email-generator#google_vignette",
+    "domain": "yopmail.com"
   }
+}
